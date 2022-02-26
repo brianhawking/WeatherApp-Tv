@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_background" translatesAutoresizingMaskIntoConstraints="NO" id="D46-6I-BAw">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentConditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-6W-qsb">
+                                <rect key="frame" x="1040" y="280" width="750" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentDewPoint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUl-hx-UXw">
+                                <rect key="frame" x="1126" y="450" width="664" height="114"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="95"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentTemp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-SG-V8G">
+                                <rect key="frame" x="1210" y="110" width="580" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="Pn3-SG-V8G" secondAttribute="trailing" constant="50" id="FPd-KP-JyJ"/>
+                            <constraint firstAttribute="trailing" secondItem="D46-6I-BAw" secondAttribute="trailing" id="Uok-xU-gDe"/>
+                            <constraint firstItem="D46-6I-BAw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fQW-t7-MYL"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="IUl-hx-UXw" secondAttribute="trailing" constant="50" id="fYN-vC-v4P"/>
+                            <constraint firstItem="Pn3-SG-V8G" firstAttribute="top" secondItem="wu6-TO-1qx" secondAttribute="top" constant="50" id="iQc-C0-nhp"/>
+                            <constraint firstItem="D46-6I-BAw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ijS-xs-kj5"/>
+                            <constraint firstItem="IUl-hx-UXw" firstAttribute="top" secondItem="MSH-6W-qsb" secondAttribute="bottom" constant="50" id="qLg-nX-wLR"/>
+                            <constraint firstItem="MSH-6W-qsb" firstAttribute="top" secondItem="Pn3-SG-V8G" secondAttribute="bottom" constant="50" id="qQ4-sj-drh"/>
+                            <constraint firstAttribute="bottom" secondItem="D46-6I-BAw" secondAttribute="bottom" id="r1M-jb-ynI"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="MSH-6W-qsb" secondAttribute="trailing" constant="50" id="rNK-r6-kOh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentConditions" destination="MSH-6W-qsb" id="Tc9-Rv-YFe"/>
+                        <outlet property="currentDewPoint" destination="IUl-hx-UXw" id="ilg-OL-C2m"/>
+                        <outlet property="currentTemp" destination="Pn3-SG-V8G" id="pfI-B8-b1y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="-5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dark_background" width="836" height="661"/>
+    </resources>
+</document>
